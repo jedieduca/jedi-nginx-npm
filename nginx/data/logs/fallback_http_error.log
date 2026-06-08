@@ -1,0 +1,4 @@
+2026/06/08 20:04:42 [error] 313#313: *4613 open() "/var/www/html/docs" failed (2: No such file or directory), client: 172.18.0.1, server: localhost-nginx-proxy-manager, request: "GET /docs HTTP/1.1", host: "api.dev.jedieduca.com.br"
+2026/06/08 20:04:52 [error] 313#313: *4613 directory index of "/var/www/html/" is forbidden, client: 172.18.0.1, server: localhost-nginx-proxy-manager, request: "GET / HTTP/1.1", host: "api.dev.jedieduca.com.br"
+2026/06/08 20:05:17 [error] 314#314: *4618 directory index of "/var/www/html/" is forbidden, client: 172.18.0.1, server: localhost-nginx-proxy-manager, request: "GET / HTTP/1.1", host: "api.dev.jedieduca.com.br", referrer: "http://dev.jedieduca.com.br:81/"
+2026/06/08 20:05:52 [error] 315#315: *4619 directory index of "/var/www/html/" is forbidden, client: 172.18.0.1, server: localhost-nginx-proxy-manager, request: "GET / HTTP/1.1", host: "api.dev.jedieduca.com.br", referrer: "http://dev.jedieduca.com.br:81/"

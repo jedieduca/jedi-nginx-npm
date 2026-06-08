@@ -1,0 +1,28 @@
+# version: '3.8'
+
+services:
+  # Container 01 - NGINX com Interface Gráfica (Nginx Proxy Manager)
+  nginx-proxy:
+    image: 'jc21/nginx-proxy-manager:latest'
+    container_name: jedi_nginx_proxy
+    restart: unless-stopped
+    ports:
+      - '80:80'   # Tráfego HTTP público
+      - '443:443' # Tráfego HTTPS público
+      - '81:81'   # Porta de Administração do Painel Web (recomenda-se proteger depois)
+    volumes:
+      - ./nginx/data:/data
+      - ./nginx/letsencrypt:/etc/letsencrypt
+      - ${CAMINHO_PROJETO_ADIANTI}:/var/www/html
+      - graficos_data:/var/www/html/mad/app/output/charts:ro
+    networks:
+      - jedieduca-network
+
+volumes:
+  graficos_data:
+    name: jedi-python_graficos_data
+    external: true
+
+networks:
+  jedieduca-network:
+    external: true
