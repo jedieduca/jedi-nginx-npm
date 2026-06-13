@@ -1,0 +1,4 @@
+# Ignorar todos os arquivos de log do Nginx ou do sistema
+*.log
+logs/
+nginx/data/logs/
