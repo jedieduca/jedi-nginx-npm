@@ -2,3 +2,6 @@
 *.log
 logs/
 nginx/data/logs/
+nginx/data/database.sqlite
+
+.env*
