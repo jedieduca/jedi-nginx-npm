@@ -16,7 +16,9 @@ services:
       - ${CAMINHO_PROJETO_ADIANTI}:/var/www/html
       - graficos_data:/var/www/html/mad/app/output/charts:ro
     networks:
-      - jedieduca-network
+      jedieduca-network:
+        aliases:
+          - api.dev.jedieduca.com.br
 
 volumes:
   graficos_data:
