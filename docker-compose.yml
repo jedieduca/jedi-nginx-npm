@@ -11,8 +11,9 @@ services:
       - ./nginx/data:/data
       - ./nginx/letsencrypt:/etc/letsencrypt
       - ${CAMINHO_PROJETO_ADIANTI}:/var/www/html
-      # Uma única montagem já engloba todo o código e a pasta storage/app/public:
       - ../jedi-site/backend/site:/var/www/html/site
+      # MAPEAMENTO DIRETO: Faz o /public/storage do Nginx ler a pasta real do storage
+      - ../jedi-site/backend/site/storage/app/public:/var/www/html/site/public/storage
       - graficos_data:/var/www/html/mad/app/output/charts:ro
     networks:
       jedieduca-network:
