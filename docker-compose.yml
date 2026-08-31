@@ -14,11 +14,9 @@ services:
       - ./nginx/data:/data
       - ./nginx/letsencrypt:/etc/letsencrypt
       - ${CAMINHO_PROJETO_ADIANTI}:/var/www/html
+      - ../jedi-site/backend/site:/var/www/html/site
+      - ../jedi-site/backend/site/storage/app/public:/var/www/html/site/storage/app/public
       - graficos_data:/var/www/html/mad/app/output/charts:ro
-      - ./backend/site:/var/www/html/site
-      - /var/www/html/site/vendor        # Preserva a pasta vendor gerada dentro da imagem
-      - /var/www/html/site/public/build  # Preserva os assets do Vite compilados na imagem
-      - /var/www/html/site/storage/app/public # Preserva as imagens do storage geradas na imagem
     networks:
       jedieduca-network:
         aliases:
