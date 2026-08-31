@@ -2,6 +2,8 @@
 *.log
 logs/
 nginx/data/logs/
+nginx/data/
+nginx/letsencrypt/
 
 # Ignorar arquivos de variáveis de ambiente
 .env
