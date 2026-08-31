@@ -14,7 +14,7 @@ services:
       - ./nginx/data:/data
       - ./nginx/letsencrypt:/etc/letsencrypt
       - ${CAMINHO_PROJETO_ADIANTI}:/var/www/html
-      - ./backend/site:/var/www/html/site
+      - ../jedi-site/backend/site:/var/www/html/site
       - graficos_data:/var/www/html/mad/app/output/charts:ro
     networks:
       jedieduca-network:
