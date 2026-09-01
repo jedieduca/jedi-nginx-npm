@@ -12,7 +12,7 @@ services:
       - ./nginx/letsencrypt:/etc/letsencrypt
       - ${CAMINHO_PROJETO_ADIANTI}:/var/www/html
       - ${CAMINHO_PROJETO_SITE}:/var/www/html/site
-      - ${CAMINHO_PROJETO_SITE_STORAGE}:/var/www/html/site/public/storage
+      - ${CAMINHO_PROJETO_SITE_STORAGE}:/var/www/html/site/storage/app/public
       - graficos_data:/var/www/html/mad/app/output/charts:ro
     networks:
       - jedieduca-network
